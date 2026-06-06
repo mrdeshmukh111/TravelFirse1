@@ -1,0 +1,1271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TravelFirse | Pune Pickup Trekking Trips</title>
+    <meta name="description" content="TravelFirse offers Pune pickup treks to Rajgad, Harishchandragad, Raigad, Devkund, Vasota Jungle Trek and more." />
+    <link rel="icon" type="image/png" href="Travel_Firse_Logo_Final_02.png">
+    <style>
+      :root {
+        --ink: #111111;
+        --muted: #5b665f;
+        --paper: #fbfbf7;
+        --leaf: #d62828;
+        --leaf-dark: #a4161a;
+        --teal: #23747a;
+        --sun: #d62828;
+        --rust: #d62828;
+        --mist: #f5eaea;
+        --line: rgba(20, 32, 28, 0.14);
+        --shadow: 0 18px 50px rgba(20, 32, 28, 0.16);
+        --radius: 8px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.5;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      .site-header {
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        right: 0;
+        left: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(20, 32, 28, 0.7);
+        color: #fff;
+        backdrop-filter: blur(14px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min(1180px, calc(100% - 32px));
+        min-height: 68px;
+        margin: 0 auto;
+        gap: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 850;
+        letter-spacing: 0;
+      }
+
+      
+      .brand-logo{
+        width:60px;
+        height:60px;
+        object-fit:contain;
+        border-radius:50%;
+      }
+
+      .brand-text{
+        display:flex;
+        flex-direction:column;
+        line-height:1.1;
+      }
+
+      .brand-title{
+        color:#fff;
+        font-size:1.2rem;
+        font-weight:900;
+      }
+
+      .brand-tagline{
+        color:rgba(255,255,255,.8);
+        font-size:.72rem;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border: 2px solid rgba(255, 255, 255, 0.78);
+        border-radius: 50%;
+        color: #fff;
+        font-size: 0.86rem;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .nav-links a {
+        padding: 10px 12px;
+        border-radius: 999px;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 0.94rem;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        background: rgba(255, 255, 255, 0.14);
+        color: #fff;
+        outline: none;
+      }
+
+      .nav-cta,
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border: 0;
+        border-radius: 999px;
+        cursor: pointer;
+        font-weight: 800;
+        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .nav-cta,
+      .btn-primary {
+        background: var(--sun);
+        color: #1b170d;
+        box-shadow: 0 12px 30px rgba(246, 164, 52, 0.3);
+      }
+
+      .nav-cta:hover,
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 16px 34px rgba(246, 164, 52, 0.38);
+      }
+
+      .btn-secondary {
+        border: 1px solid rgba(255, 255, 255, 0.52);
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        min-height: 92vh;
+        padding-top: 68px;
+        color: #fff;
+        isolation: isolate;
+      }
+
+      .hero::before {
+        position: absolute;
+        z-index: -2;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(7, 16, 13, 0.82) 0%, rgba(7, 16, 13, 0.48) 52%, rgba(7, 16, 13, 0.18) 100%),
+          url("https://commons.wikimedia.org/wiki/Special:FilePath/Harishchandragarh-konkan%20kada.jpg?width=1800") center / cover;
+        content: "";
+      }
+
+      .hero::after {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 30%;
+        background: linear-gradient(180deg, transparent, rgba(251, 251, 247, 0.96));
+        content: "";
+      }
+
+      .hero-inner {
+        display: grid;
+        align-content: center;
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 78px 0 120px;
+      }
+
+      .eyebrow {
+        width: fit-content;
+        margin: 0 0 18px;
+        padding: 8px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.38);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 0.88rem;
+        font-weight: 800;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin-bottom: 14px;
+        font-size: clamp(3.1rem, 9vw, 7.5rem);
+        line-height: 0.9;
+        letter-spacing: 0;
+      }
+
+      .hero-tagline {
+        max-width: 660px;
+        margin-bottom: 16px;
+        color: #fff;
+        font-size: clamp(1.35rem, 3vw, 2.35rem);
+        font-weight: 900;
+        line-height: 1.05;
+      }
+
+      .hero-copy {
+        max-width: 640px;
+        margin-bottom: 30px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: clamp(1.06rem, 2vw, 1.3rem);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 36px;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(110px, 170px));
+        gap: 1px;
+        overflow: hidden;
+        width: fit-content;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(14px);
+      }
+
+      .hero-stat {
+        padding: 16px 18px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .hero-stat strong {
+        display: block;
+        color: #fff;
+        font-size: 1.18rem;
+      }
+
+      .hero-stat span {
+        color: rgba(255, 255, 255, 0.74);
+        font-size: 0.86rem;
+      }
+
+      main {
+        overflow: clip;
+      }
+
+      section {
+        padding: 86px 0;
+      }
+
+      .section-inner {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        margin-bottom: 28px;
+        gap: 24px;
+      }
+
+      .section-kicker {
+        margin-bottom: 8px;
+        color: var(--rust);
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        max-width: 760px;
+        margin-bottom: 0;
+        font-size: clamp(2rem, 4.2vw, 4.1rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .section-copy {
+        max-width: 390px;
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+
+      .chip {
+        min-height: 38px;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--muted);
+        cursor: pointer;
+        font-weight: 750;
+      }
+
+      .chip.is-active {
+        border-color: var(--leaf);
+        background: var(--leaf);
+        color: #fff;
+      }
+
+      .trek-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(220px, 1fr));
+        gap: 14px;
+      }
+
+      .trek-card {
+        display: grid;
+        overflow: hidden;
+        min-height: 430px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fff;
+        box-shadow: 0 10px 28px rgba(20, 32, 28, 0.08);
+      }
+
+      .trek-media {
+        position: relative;
+        min-height: 178px;
+        background: var(--mist);
+      }
+
+      .trek-media img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .badge {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(20, 32, 28, 0.82);
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 850;
+      }
+
+      .trek-body {
+        display: grid;
+        align-content: start;
+        gap: 14px;
+        padding: 18px;
+      }
+
+      .trek-body h3 {
+        margin: 0;
+        font-size: 1.25rem;
+        line-height: 1.12;
+      }
+
+      .trek-body p {
+        min-height: 72px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .meta-row span {
+        padding: 6px 9px;
+        border-radius: 999px;
+        background: var(--mist);
+        color: var(--leaf-dark);
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+
+      .trek-card[hidden] {
+        display: none;
+      }
+
+      .pickup-band {
+        background: var(--ink);
+        color: #fff;
+      }
+
+      .pickup-layout {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.8fr) minmax(360px, 1.2fr);
+        gap: 48px;
+        align-items: center;
+      }
+
+      .pickup-band .section-kicker {
+        color: var(--sun);
+      }
+
+      .pickup-band .section-copy,
+      .pickup-band p {
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .route-line {
+        display: grid;
+        gap: 0;
+      }
+
+      .stop {
+        position: relative;
+        display: grid;
+        grid-template-columns: 36px 1fr auto;
+        gap: 14px;
+        align-items: center;
+        min-height: 70px;
+      }
+
+      .stop::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 17px;
+        width: 2px;
+        background: rgba(255, 255, 255, 0.2);
+        content: "";
+      }
+
+      .stop:first-child::before {
+        top: 50%;
+      }
+
+      .stop:last-child::before {
+        bottom: 50%;
+      }
+
+      .dot {
+        position: relative;
+        z-index: 1;
+        width: 36px;
+        height: 36px;
+        border: 2px solid rgba(255, 255, 255, 0.66);
+        border-radius: 50%;
+        background: var(--ink);
+      }
+
+      .dot::after {
+        position: absolute;
+        inset: 9px;
+        border-radius: 50%;
+        background: var(--sun);
+        content: "";
+      }
+
+      .stop strong {
+        display: block;
+        color: #fff;
+        line-height: 1.15;
+      }
+
+      .stop span {
+        color: rgba(255, 255, 255, 0.64);
+        font-size: 0.9rem;
+      }
+
+      .stop time {
+        color: var(--sun);
+        font-weight: 850;
+      }
+
+      .experience {
+        background: #fff;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
+        gap: 18px;
+      }
+
+      .feature {
+        padding: 24px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .feature-symbol {
+        display: grid;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 16px;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        color: var(--leaf);
+        font-weight: 950;
+      }
+
+      .feature h3 {
+        margin-bottom: 8px;
+        font-size: 1.05rem;
+      }
+
+      .feature p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .booking {
+        background:
+          linear-gradient(90deg, rgba(251, 251, 247, 0.96), rgba(251, 251, 247, 0.84)),
+          url("https://commons.wikimedia.org/wiki/Special:FilePath/Vasota%20fort%20Maharashtra.jpg?width=1600") center / cover fixed;
+      }
+
+      .booking-layout {
+        display: grid;
+        grid-template-columns: minmax(260px, 0.86fr) minmax(340px, 1.14fr);
+        gap: 42px;
+        align-items: start;
+      }
+
+      .price-list {
+        display: grid;
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .price-row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 16px;
+        align-items: center;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .price-row strong {
+        font-size: 1.02rem;
+      }
+
+      .price-row span {
+        color: var(--leaf-dark);
+        font-weight: 900;
+      }
+
+      .booking-form {
+        display: grid;
+        gap: 16px;
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: var(--shadow);
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      label {
+        display: grid;
+        gap: 7px;
+        color: var(--muted);
+        font-size: 0.88rem;
+        font-weight: 800;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        min-height: 48px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #fff;
+        color: var(--ink);
+        padding: 11px 12px;
+      }
+
+      textarea {
+        min-height: 94px;
+        resize: vertical;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--teal);
+        outline: 3px solid rgba(35, 116, 122, 0.16);
+      }
+
+      .form-note {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .message-preview {
+        padding: 14px;
+        border-left: 4px solid var(--leaf);
+        background: var(--mist);
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .gallery-strip {
+        display: grid;
+        grid-template-columns: 1.35fr 0.85fr 0.8fr;
+        gap: 12px;
+        margin-top: 32px;
+      }
+
+      .gallery-strip img {
+        width: 100%;
+        height: 320px;
+        border-radius: var(--radius);
+        object-fit: cover;
+      }
+
+      .gallery-strip img:nth-child(2) {
+        height: 250px;
+        align-self: end;
+      }
+
+      .gallery-strip img:nth-child(3) {
+        height: 290px;
+        align-self: center;
+      }
+
+      .site-footer {
+        padding: 40px 0;
+        background: #0f1714;
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .footer-layout {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        align-items: start;
+      }
+
+      .footer-layout strong {
+        display: block;
+        margin-bottom: 6px;
+        color: #fff;
+      }
+
+      .credits {
+        max-width: 680px;
+        margin: 0;
+        font-size: 0.82rem;
+      }
+
+      .credits a {
+        color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .mobile-menu {
+        display: none;
+      }
+
+      @media (max-width: 1120px) {
+        .trek-grid {
+          grid-template-columns: repeat(3, minmax(220px, 1fr));
+        }
+      }
+
+      @media (max-width: 820px) {
+        .nav {
+          min-height: 64px;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 64px;
+          right: 16px;
+          left: 16px;
+          display: none;
+          flex-direction: column;
+          align-items: stretch;
+          padding: 10px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: var(--radius);
+          background: rgba(20, 32, 28, 0.96);
+        }
+
+        .nav-links.is-open {
+          display: flex;
+        }
+
+        .nav-links a,
+        .nav-links .nav-cta {
+          justify-content: flex-start;
+          border-radius: 6px;
+        }
+
+        .mobile-menu {
+          display: inline-grid;
+          width: 44px;
+          height: 44px;
+          place-items: center;
+          border: 1px solid rgba(255, 255, 255, 0.28);
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.08);
+          color: #fff;
+          cursor: pointer;
+          font-size: 1.35rem;
+          line-height: 1;
+        }
+
+        .hero {
+          min-height: 86vh;
+        }
+
+        .hero-inner {
+          padding: 72px 0 98px;
+        }
+
+        .hero-stats {
+          grid-template-columns: 1fr;
+          width: min(100%, 330px);
+        }
+
+        section {
+          padding: 64px 0;
+        }
+
+        .section-heading,
+        .pickup-layout,
+        .booking-layout,
+        .footer-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .section-heading {
+          display: grid;
+        }
+
+        .trek-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .feature-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .gallery-strip {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .gallery-strip img,
+        .gallery-strip img:nth-child(2),
+        .gallery-strip img:nth-child(3) {
+          height: 230px;
+          align-self: auto;
+        }
+
+        .gallery-strip img:first-child {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 580px) {
+        .nav {
+          width: min(100% - 24px, 1180px);
+        }
+
+        .brand-mark {
+          width: 34px;
+          height: 34px;
+          font-size: 0.78rem;
+        }
+
+        .hero::before {
+          background:
+            linear-gradient(180deg, rgba(7, 16, 13, 0.9) 0%, rgba(7, 16, 13, 0.54) 70%, rgba(7, 16, 13, 0.18) 100%),
+            url("https://commons.wikimedia.org/wiki/Special:FilePath/Harishchandragarh-konkan%20kada.jpg?width=1100") center / cover;
+        }
+
+        .hero-inner,
+        .section-inner {
+          width: min(100% - 24px, 1180px);
+        }
+
+        h1 {
+          font-size: clamp(3rem, 17vw, 4.9rem);
+        }
+
+        .hero-actions,
+        .filters {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .btn,
+        .chip {
+          width: 100%;
+        }
+
+        .trek-grid,
+        .feature-grid,
+        .form-row,
+        .gallery-strip {
+          grid-template-columns: 1fr;
+        }
+
+        .trek-card {
+          min-height: auto;
+        }
+
+        .trek-body p {
+          min-height: auto;
+        }
+
+        .stop {
+          grid-template-columns: 34px 1fr;
+        }
+
+        .stop time {
+          grid-column: 2;
+        }
+
+        .booking {
+          background:
+            linear-gradient(90deg, rgba(251, 251, 247, 0.97), rgba(251, 251, 247, 0.9)),
+            url("https://commons.wikimedia.org/wiki/Special:FilePath/Vasota%20fort%20Maharashtra.jpg?width=900") center / cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="TravelFirse home">
+          <img src="Travel_Firse_Logo_Final_02.png" alt="TravelFirse Logo" class="brand-logo">
+          <div class="brand-text">
+            <span class="brand-title">TravelFirse</span>
+            <span class="brand-tagline">सफर के बाद का सफर</span>
+          </div>
+        </a>
+        <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">≡</button>
+        <div class="nav-links" id="navLinks">
+          <a href="#treks">Treks</a>
+          <a href="#pickup">Pickup</a>
+          <a href="#experience">Experience</a>
+          <a href="#booking" class="nav-cta">Book Seat</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="TravelFirse trekking trips from Pune">
+        <div class="hero-inner">
+          <p class="eyebrow">Pune pickup trekking group</p>
+          <h1>TravelFirse</h1>
+          <p class="hero-tagline">सफर के बाद का सफर ...</p>
+          <p class="hero-copy">Rajgad, Harishchandragad, Raigad, Devkund, Vasota Jungle Trek and more weekend adventures with planned pickup points across Pune.</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="btn btn-primary" href="#booking">Plan My Trek</a>
+            <a class="btn btn-secondary" href="#treks">Explore Treks</a>
+          </div>
+          <div class="hero-stats" aria-label="TravelFirse highlights">
+            <div class="hero-stat">
+              <strong>Pune</strong>
+              <span>early pickup</span>
+            </div>
+            <div class="hero-stat">
+              <strong>5+</strong>
+              <span>Sahyadri routes</span>
+            </div>
+            <div class="hero-stat">
+              <strong>Small</strong>
+              <span>guided batches</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="treks" class="treks">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Weekend plans</p>
+              <h2>Choose your next Sahyadri trek.</h2>
+            </div>
+            <p class="section-copy">Fort climbs, jungle trails, waterfalls and heritage walks arranged with transport, food planning and local route support.</p>
+          </div>
+
+          <div class="filters" aria-label="Filter treks">
+            <button class="chip is-active" type="button" data-filter="all">All Treks</button>
+            <button class="chip" type="button" data-filter="beginner">Beginner Friendly</button>
+            <button class="chip" type="button" data-filter="moderate">Moderate</button>
+            <button class="chip" type="button" data-filter="overnight">Overnight</button>
+          </div>
+
+          <div class="trek-grid">
+            <article class="trek-card" data-kind="moderate beginner">
+              <div class="trek-media">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pune%20Rajgad%20Fort.jpg?width=900" alt="Rajgad Fort hills near Pune" loading="lazy" />
+                <span class="badge">Rajgad</span>
+              </div>
+              <div class="trek-body">
+                <h3>Rajgad Fort</h3>
+                <p>The classic Pune-side fort trail with big views, machi walks and a rewarding climb for first-time trekkers.</p>
+                <div class="meta-row">
+                  <span>1 day</span>
+                  <span>Moderate</span>
+                  <span>5 AM pickup</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="trek-card" data-kind="moderate overnight">
+              <div class="trek-media">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Harishchandragarh-konkan%20kada.jpg?width=900" alt="Konkan Kada at Harishchandragad" loading="lazy" />
+                <span class="badge">Harishchandragad</span>
+              </div>
+              <div class="trek-body">
+                <h3>Harishchandragad</h3>
+                <p>A bigger Sahyadri route for Konkan Kada views, temple caves and a memorable night travel plan from Pune.</p>
+                <div class="meta-row">
+                  <span>Overnight</span>
+                  <span>Hard</span>
+                  <span>Guide led</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="trek-card" data-kind="beginner moderate">
+              <div class="trek-media">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Raigad%20Fort%2C%20Maharashtra%20%282018%29.jpg?width=900" alt="Raigad Fort in Maharashtra" loading="lazy" />
+                <span class="badge">Raigad</span>
+              </div>
+              <div class="trek-body">
+                <h3>Raigad Fort</h3>
+                <p>Heritage-focused fort day with history stops, plateau views and a relaxed route option for mixed groups.</p>
+                <div class="meta-row">
+                  <span>1 day</span>
+                  <span>Easy to moderate</span>
+                  <span>History walk</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="trek-card" data-kind="moderate beginner">
+              <div class="trek-media">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Devkund%20waterfalls.jpg?width=900" alt="Devkund Waterfall in Maharashtra" loading="lazy" />
+                <span class="badge">Devkund</span>
+              </div>
+              <div class="trek-body">
+                <h3>Devkund Waterfall</h3>
+                <p>A forest-waterfall trail with a seasonal route plan, early start and enough time at the blue pool viewpoint.</p>
+                <div class="meta-row">
+                  <span>1 day</span>
+                  <span>Moderate</span>
+                  <span>Seasonal</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="trek-card" data-kind="moderate overnight">
+              <div class="trek-media">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vasota%20fort%20Maharashtra.jpg?width=900" alt="View from Vasota Fort in Sahyadri mountains" loading="lazy" />
+                <span class="badge">Vasota</span>
+              </div>
+              <div class="trek-body">
+                <h3>Vasota Jungle Trek</h3>
+                <p>Dense forest route with boat transfer, permit planning and Satara-side logistics handled before departure.</p>
+                <div class="meta-row">
+                  <span>Overnight</span>
+                  <span>Moderate</span>
+                  <span>Permits</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pickup" class="pickup-band">
+        <div class="section-inner pickup-layout">
+          <div>
+            <p class="section-kicker">Pune se pickup</p>
+            <h2>Clear route. No last-minute confusion.</h2>
+            <p class="section-copy">Pickup sequence can be adjusted by batch, but the trip starts with familiar city points and one shared update before departure.</p>
+          </div>
+          <div class="route-line" aria-label="Pickup points">
+            <div class="stop">
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <strong>Swargate</strong>
+                <span>Main pickup for central Pune</span>
+              </div>
+              <time>05:00</time>
+            </div>
+            <div class="stop">
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <strong>Katraj</strong>
+                <span>Highway side pickup</span>
+              </div>
+              <time>05:20</time>
+            </div>
+            <div class="stop">
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <strong>Wakad / Hinjewadi</strong>
+                <span>For western Pune batches</span>
+              </div>
+              <time>05:45</time>
+            </div>
+            <div class="stop">
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <strong>Route departure</strong>
+                <span>Breakfast halt and trek briefing</span>
+              </div>
+              <time>06:10</time>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="experience">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Trip experience</p>
+              <h2>Everything needed for a solid trek day.</h2>
+            </div>
+            <p class="section-copy">Built for friends, office groups, solo joiners and repeat weekend trekkers who want simple planning and a dependable crew.</p>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature">
+              <span class="feature-symbol">01</span>
+              <h3>Guided Routes</h3>
+              <p>Route briefing, pace control and regrouping points through the climb.</p>
+            </div>
+            <div class="feature">
+              <span class="feature-symbol">02</span>
+              <h3>Transport Planning</h3>
+              <p>Pune pickup, vehicle coordination and return timing planned before the trip.</p>
+            </div>
+            <div class="feature">
+              <span class="feature-symbol">03</span>
+              <h3>Food And Water Breaks</h3>
+              <p>Breakfast, packed meal guidance and practical halt planning by route.</p>
+            </div>
+            <div class="feature">
+              <span class="feature-symbol">04</span>
+              <h3>Safety Basics</h3>
+              <p>First-aid kit, local support and weather-aware calls for seasonal routes.</p>
+            </div>
+          </div>
+
+          <div class="gallery-strip" aria-label="TravelFirse trek gallery">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic%20view%20of%20the%20Rajgad%20fort.jpg?width=1100" alt="Panoramic view of Rajgad Fort" loading="lazy" />
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Maharashtra%2C%20Devkund.jpg?width=800" alt="Scenery view while trekking to Devkund Waterfall" loading="lazy" />
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Raigad%20Fort%20Plateau.JPG?width=800" alt="Raigad Fort plateau" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section id="booking" class="booking">
+        <div class="section-inner booking-layout">
+          <div>
+            <p class="section-kicker">Book with TravelFirse</p>
+            <h2>Tell us your trek, date and group size.</h2>
+            <p class="section-copy">Send one clean inquiry and the TravelFirse team can confirm seats, cost, pickup point and packing list.</p>
+            <div class="price-list" aria-label="Sample starting prices">
+              <div class="price-row">
+                <strong>Rajgad / Raigad</strong>
+                <span>from Rs. 999</span>
+              </div>
+              <div class="price-row">
+                <strong>Devkund Waterfall</strong>
+                <span>from Rs. 1,299</span>
+              </div>
+              <div class="price-row">
+                <strong>Harishchandragad / Vasota</strong>
+                <span>custom batch</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="booking-form" id="bookingForm">
+            <div class="form-row">
+              <label>
+                Name
+                <input name="name" type="text" placeholder="Your name" autocomplete="name" required />
+              </label>
+              <label>
+                Phone
+                <input name="phone" type="tel" placeholder="+91" autocomplete="tel" required />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Trek
+                <select name="trek" required>
+                  <option value="Rajgad Fort">Rajgad Fort</option>
+                  <option value="Harishchandragad">Harishchandragad</option>
+                  <option value="Raigad Fort">Raigad Fort</option>
+                  <option value="Devkund Waterfall">Devkund Waterfall</option>
+                  <option value="Vasota Jungle Trek">Vasota Jungle Trek</option>
+                  <option value="Custom group trek">Custom group trek</option>
+                </select>
+              </label>
+              <label>
+                Group Size
+                <input name="group" type="number" min="1" value="2" required />
+              </label>
+            </div>
+            <label>
+              Preferred Date
+              <input name="date" type="date" />
+            </label>
+            <label>
+              Message
+              <textarea name="message" placeholder="Pickup point, route preference, or custom batch details"></textarea>
+            </label>
+            <div class="message-preview" id="messagePreview">Hi TravelFirse, I want to plan a trek from Pune.</div>
+            <button class="btn btn-primary" type="submit">Send WhatsApp Inquiry</button>
+            <p class="form-note">WhatsApp number is currently set as a placeholder: +91 98765 43210.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-inner footer-layout">
+        <div>
+          <strong>TravelFirse</strong>
+          <p class="credits">Pune pickup trekking trips for Rajgad, Harishchandragad, Raigad, Devkund, Vasota and custom Sahyadri plans.</p>
+        </div>
+        <p class="credits">
+          Images via Wikimedia Commons:
+          <a href="https://commons.wikimedia.org/wiki/File:Harishchandragarh-konkan_kada.jpg">Harishchandragad</a>,
+          <a href="https://commons.wikimedia.org/wiki/File:Pune_Rajgad_Fort.jpg">Rajgad</a>,
+          <a href="https://commons.wikimedia.org/wiki/File:Raigad_Fort,_Maharashtra_(2018).jpg">Raigad</a>,
+          <a href="https://commons.wikimedia.org/wiki/File:Devkund_waterfalls.jpg">Devkund</a>,
+          <a href="https://commons.wikimedia.org/wiki/File:Vasota_fort_Maharashtra.jpg">Vasota</a>.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const navButton = document.querySelector(".mobile-menu");
+      const navLinks = document.querySelector("#navLinks");
+      const chips = document.querySelectorAll(".chip");
+      const cards = document.querySelectorAll(".trek-card");
+      const form = document.querySelector("#bookingForm");
+      const preview = document.querySelector("#messagePreview");
+      const whatsappNumber = "919876543210";
+
+      navButton.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("is-open");
+        navButton.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("is-open");
+          navButton.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      chips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          const filter = chip.dataset.filter;
+          chips.forEach((item) => item.classList.toggle("is-active", item === chip));
+
+          cards.forEach((card) => {
+            const show = filter === "all" || card.dataset.kind.includes(filter);
+            card.hidden = !show;
+          });
+        });
+      });
+
+      function buildMessage() {
+        const data = new FormData(form);
+        const date = data.get("date") || "flexible date";
+        const message = data.get("message") || "Please share details and availability.";
+
+        return `Hi TravelFirse, I want to book ${data.get("trek")} from Pune.
+Name: ${data.get("name") || "-"}
+Phone: ${data.get("phone") || "-"}
+Group size: ${data.get("group") || "1"}
+Preferred date: ${date}
+Message: ${message}`;
+      }
+
+      form.addEventListener("input", () => {
+        preview.textContent = buildMessage();
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(buildMessage())}`;
+        window.open(url, "_blank", "noopener,noreferrer");
+      });
+    </script>
+  </body>
+</html>
